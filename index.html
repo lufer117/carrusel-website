@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Carousel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+    .carousel {
+      width: 700px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .carousel-track {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+    .carousel-track img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0%   { transform: translateX(0); }
+      30%  { transform: translateX(0); }
+      33%  { transform: translateX(-100%); }
+      63%  { transform: translateX(-100%); }
+      66%  { transform: translateX(-200%); }
+      96%  { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="image1.jpg" alt="Informetrics">
+      <img src="image2.jpg" alt="Ecosimple">
+      <img src="image3.jpg" alt="Proyectamos">
+      <img src="image4.jpg" alt="Teknidata">
+      <img src="image5.jpg" alt="Ingeprol">
+    </div>
+  </div>
+</body>
+</html>
